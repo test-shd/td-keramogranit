@@ -1,5 +1,6 @@
 .promo {
-   
+   overflow: hidden;
+   width: 100%;
     &__slider {
         width: 100%;
         height: 100vh;
@@ -350,6 +351,7 @@
 }
 .main-rew {
     padding: 17px 0 85px;
+    overflow: hidden;
     &__item {
         border-radius: 6px;
         border: 1px solid #02543E;

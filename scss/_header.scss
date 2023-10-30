@@ -58,13 +58,16 @@ header {
     &__nav {
         position: absolute;
         top: 0;
-        right: -1000%;
+        right: -100%;
         width: 40%;
         transition: right .3s;
         background: #fff;
         z-index: 11;
         &_active {
             right: 0;
+            position: fixed;
+            overflow-y: scroll;
+            overflow-x: hidden;
         }
     }
 }
