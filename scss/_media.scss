@@ -95,10 +95,23 @@
     }
     .main-form {
         padding-bottom: 60px;
+        padding-top: 48px;
+        &__form {
+            padding: 48px 16px;
+        }
     }
     .main-rew {
         .swiper-slide-active {
             transform: scale(1);
+        }
+        padding: 0 16px;
+        .mb_80 {
+            margin-bottom: 24px;
+        }
+        &__slider {
+            &__arrows {
+                margin-top: 24px;
+            }
         }
     }
     .footer {
