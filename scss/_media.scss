@@ -91,6 +91,11 @@
     .main-form {
         padding-bottom: 60px;
     }
+    .main-rew {
+        .swiper-slide-active {
+            transform: scale(1);
+        }
+    }
     .footer {
         &__wrapper {
             flex-direction: column;

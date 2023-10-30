@@ -29,9 +29,9 @@ const swiper = new Swiper('.promo__slider', {
 
 //rew slider
 const swiper2 = new Swiper('.main-rew__slider', {
-    slidesPerView: 3,
-    spaceBetween: 54,
-    centeredSlides: true,
+    slidesPerView: 1,
+    spaceBetween: 40,
+    centeredSlides: false,
     loop: true,
     
     
@@ -41,13 +41,11 @@ const swiper2 = new Swiper('.main-rew__slider', {
       prevEl: '.main-rew__slider__prev',
     },
     breakpoints: {
-      525: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 40,
+      
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 54,
+        centeredSlides: true,
       },
      
      
