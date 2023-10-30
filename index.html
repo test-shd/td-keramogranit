@@ -96,7 +96,10 @@
                             </button>
                         
                     </div>
-                    <img src="img/promo-bg.png" class="promo__img" alt="bg">
+                    <picture class="promo__img">
+                        <source srcset="img/promo-bg2x.webp" type="image/webp">
+                        <img src="img/promo-bg.png" class="promo__img" alt="bg" srcset="img/promo-bg.png 1x, img/promo-bg2x.png 2x">
+                    </picture>
                 </div>
                 <div class="swiper-slide promo__slide">
                     <a href class="container">
@@ -193,15 +196,18 @@
                 </div>
             </div>
             <div class="main-about__images mb_48">
-                <div class="main-about__img">
+                <picture class="main-about__img">
+                    <source srcset="img/about-img1.webp">
                     <img src="img/about-img1.jpg" alt="интерьер с керамогранитом">
-                </div>
-                <div class="main-about__img">
+                </picture>
+                <picture class="main-about__img">
+                    <source srcset="img/about-img2.webp">
                     <img src="img/about-img2.jpg" alt="интерьер с керамогранитом">
-                </div>
-                <div class="main-about__img">
+                </picture>
+                <picture class="main-about__img">
+                    <source srcset="img/about-img3.webp">
                     <img src="img/about-img3.jpg" alt="интерьер с керамогранитом">
-                </div>
+                </picture>
             </div>
             <div class="container">
                 <h2 class="title title_w500 mb_24">Недорогой керамогранит для облицовочных работ</h2>
