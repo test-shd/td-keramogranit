@@ -22,7 +22,7 @@
                     <a href="index.html" class="logo">
                         <img src="img/logo-white.svg" alt="Логотип">
                     </a>
-                    <a href="tel+74959253692" class="header__phone">+7 (495)925-36-92</a>
+                    <a href="tel+74959253692" class="header__phone desktop">+7 (495)925-36-92</a>
                     <button class="header__btn" type="button">Меню</button>
                 </div>
             </div>
@@ -70,6 +70,10 @@
                     </li>
                 
                 </ul>
+                <div class="mobile">
+                    <a href="tel+74959253692" class="header__phone mb_36">+7 (495)925-36-92</a>
+                    <a href="mailto:sale@td-keramogranit.ru" class="header__phone footer__cont_email">sale@td-keramogranit.ru</a>
+                </div>
                 <button class="menu__close" type="button"></button>
             </nav>
         </header>
@@ -88,7 +92,7 @@
                         </div>
                         
                             <button type="button" class="promo__btn">
-                                <span>В каталог</span>
+                                <span><a href="#catalog">В каталог</a></span>
                             </button>
                         
                     </div>
@@ -134,7 +138,7 @@
 
     <section class="main-catalog">
         <div class="container">
-            <h2 class="title">Каталог</h2>
+            <h2 class="title" id="catalog">Каталог</h2>
             <div class="main-catalog__wrapper">
                 <a href="#" class="main-catalog__item">
                     <img src="img/main-catalog-graniteya.png" alt="гранитея">
@@ -165,7 +169,7 @@
                     <button class="btn">Заказать звонок</button>
                 </div>
                 <div class="policy">
-                    <input type="checkbox" class="form__checkbox">
+                    <input type="checkbox" class="form__checkbox" required>
                     <p class="policy__text">
                         Я выражаю согласие на передачу и обработку персональных данных в соответствии с <a href="policy.html">Политикой конфиденциальности</a>
                     </p>
@@ -175,21 +179,27 @@
     </section>
     <section class="main-about">
         <div class="container">
-            <div class="wrapper_center">
+            <div class="wrapper_center mb_56">
                 <p class="title">
                     Продажа плитки керамогранита в Москве и Московской области
                 </p>
                 <div class="main-about__content">
                     <p class="fs_16 lh_160 mb_16">
-                        Если и есть универсальный облицовочный материал, который сочетает в себе высокие эксплуатационные и эстетические характеристики, то это определенно керамогранит. Где купить плитку, чтобы не переплатить? В ООО ТД «Керамогранит»! Мы поставляем керамогранит от лидеров индустрии и продаем материал от 1 коробки.
+                        Если и есть универсальный облицовочный материал, который сочетает в себе высокие эксплуатационные и эстетические характеристики, то это определенно керамогранит. Где купить плитку, чтобы не переплатить? <span class="fw_600">В ООО ТД «Керамогранит»!</span> Мы поставляем керамогранит от лидеров индустрии и продаем материал от 1 коробки.
                     </p>
                     <a href="#" class="btn_transparent">О компании</a>
                 </div>
             </div>
             <div class="main-about__images mb_48">
-                <img class="main-about__img" src="img/about-img1.png" alt="интерьер с керамогранитом">
-                <img class="main-about__img" src="img/about-img2.png" alt="интерьер с керамогранитом">
-                <img class="main-about__img" src="img/about-img3.png" alt="интерьер с керамогранитом">
+                <div class="main-about__img">
+                    <img src="img/about-img1.jpg" alt="интерьер с керамогранитом">
+                </div>
+                <div class="main-about__img">
+                    <img src="img/about-img2.jpg" alt="интерьер с керамогранитом">
+                </div>
+                <div class="main-about__img">
+                    <img src="img/about-img3.jpg" alt="интерьер с керамогранитом">
+                </div>
             </div>
             <h2 class="title title_w500 mb_24">Недорогой керамогранит для облицовочных работ</h2>
             <div class="wrapper2 ml_90">
@@ -293,7 +303,7 @@
                     <button class="btn" type="button">Заказать звонок</button>
                 </div>
                 <div class="policy">
-                    <input type="checkbox" class="form__checkbox">
+                    <input type="checkbox" class="form__checkbox" required>
                     <p class="policy__text">
                         Я выражаю согласие на передачу и обработку персональных данных в соответствии с <a href="policy.html">Политикой конфиденциальности</a>
                     </p>
@@ -328,18 +338,18 @@
                 <div class="footer__item">
                     <ul class="footer__list">
                         <li class="footer__li">
-                            <a href="tel:+74959253692" class="footer__cont footer__cont_phone">+7 (495) 925-36-92</a>
+                            <a href="tel:+74959253692" class="footer__cont footer__cont_phone" rel="noopener noreferrer">+7 (495) 925-36-92</a>
                         </li>
                         <li class="footer__li">
-                            <a href="mailto:sale@td-keramogranit.ru" class="footer__cont footer__cont_email">sale@td-keramogranit.ru</a>
+                            <a href="mailto:sale@td-keramogranit.ru" class="footer__cont footer__cont_email" rel="noopener noreferrer">sale@td-keramogranit.ru</a>
                         </li>
                         <li class="footer__li">
                             <span class="footer__cont__span">Офис продаж</span>
-                            <a href="https://yandex.ru/maps/-/CDa1ZE05" target="_blank" rel="noopener noreferrer" class="footer__cont">г. Москва, 4й Кожевнический, д.2/12 1-этаж</a>
+                            <a href="https://yandex.ru/maps/-/CDa1ZE05" target="_blank" rel="noopener noreferrer" class="footer__cont footer__cont_place">г. Москва, 4й Кожевнический, д.2/12 1-этаж</a>
                         </li>
                         <li class="footer__li">
                             <span class="footer__cont__span">Центральный офис</span>
-                            <a href="https://yandex.ru/maps/-/CDa1ZYMJ" target="_blank" rel="noopener noreferrer" class="footer__cont">г. Москва, Ходынский б-р, дом 2</a>
+                            <a href="https://yandex.ru/maps/-/CDa1ZYMJ" target="_blank" rel="noopener noreferrer" class="footer__cont footer__cont_place">г. Москва, Ходынский б-р, дом 2</a>
                         </li>
                     </ul>
 

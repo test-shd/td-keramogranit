@@ -13,6 +13,7 @@ footer {
     &__list {
         list-style-type: none;
     }
+    
     &__link {
         color: #fff;
         font-size: 16px;
@@ -31,8 +32,31 @@ footer {
         display: block;
         margin-bottom: 24px;
         transition: opacity .3s;
+        display: flex;
+        column-gap: 12px;
        &:hover {
         opacity: .7;
+       }
+       &::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+       }
+       &_phone {
+        &::before {
+            background: url(../img/icons/phone.svg) no-repeat center/contain;
+        }
+       }
+       &_email {
+        &::before {
+            background: url(../img/icons/email.svg) no-repeat center/contain;
+        }
+       }
+       &_place {
+        &::before {
+            background: url(../img/icons/place.svg) no-repeat center/contain;
+        }
        }
         &__span {
             font-size: 14px;

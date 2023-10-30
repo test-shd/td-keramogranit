@@ -9,7 +9,10 @@ $('.menu__close').on('click', function(){
 
 
 $('.menu__item__submenu').on('mouseenter', function(){
-    $('.submenu').toggleClass('submenu_active');
+    $('.submenu').addClass('submenu_active');
+});
+$('.menu__item__submenu').on('mouseleave', function(){
+  $('.submenu').removeClass('submenu_active');
 });
 
 //promo slider
@@ -37,7 +40,18 @@ const swiper2 = new Swiper('.main-rew__slider', {
       nextEl: '.main-rew__slider__next',
       prevEl: '.main-rew__slider__prev',
     },
-  
+    breakpoints: {
+      525: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+     
+     
+    },
    
   });
 
@@ -57,14 +71,29 @@ const swiper2 = new Swiper('.main-rew__slider', {
     });
 
     gsap.to('.promo__img', {
-      'width': '150%',
+      'width': '170%',
       scrollTrigger: {
         start: 'top top',
         end: '400px',
-        markers: true,
+        // markers: true,
         scrub: true,
       }
     });
+
+    const tlImg = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.main-about__images',
+        start: 'top top',
+        pin: true,
+        scrub: 1,
+      }
+    });
+    tlImg.to('.main-about__img:first-child img', {
+      scale: 1
+    });
+    tlImg.to('.main-about__img:last-child img', {
+      scale: 0
+    }, '<');
    
  }
  animation();

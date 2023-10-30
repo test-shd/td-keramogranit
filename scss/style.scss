@@ -4,6 +4,9 @@
     margin: 0;
 }
 @import '_vari.scss';
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     color: $text-color;
@@ -184,7 +187,12 @@ body {
         
     }
 }
+.mobile {
+    display: none;
+}
 
 @import '_header.scss';
 @import '_main.scss';
 @import '_footer.scss';
+
+@import '_media.scss';

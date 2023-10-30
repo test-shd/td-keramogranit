@@ -1,0 +1,115 @@
+@media screen and (max-width:1023px) {
+    .main-form {
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+@media screen and (max-width:767px) {
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .header {
+        &__nav {
+            width: 100%;
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            
+        }
+        &__phone {
+            color: $text-color;
+            font-weight: 400;
+            padding-left: 36px;
+        }
+    }
+    .promo {
+        &__title {
+            font-size: 36px;
+        }
+        &__wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__subtitle {
+            max-width: 100%;
+        }
+    }
+    .main-catalog {
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+        &__item {
+            height: 300px;
+            &:nth-child(3) {
+                .main-catalog__name {
+                    width: 100%;
+                }
+            }
+        }
+        &__form {
+            .wrapper_center {
+                flex-direction: column;
+                row-gap: 24px;
+            }
+        }
+    }
+    .main-about {
+        padding: 60px 0;
+        .wrapper_center {
+            flex-direction: column;
+            row-gap: 16px;
+        }
+        .title {
+            width: 100%;
+        }
+        &__content {
+            width: 100%;
+            order: 2;
+        }
+        .ml_90 {
+            margin-left: 0;
+        }
+        .wrapper2 {
+            flex-direction: column;
+            row-gap: 16px;
+        }
+        &__picture {
+            order: 1;
+            width: 100%;
+            max-width: 320px;
+            height: 300px;
+            margin-inline: auto;
+        }
+    }
+    .main-form {
+        padding-bottom: 60px;
+    }
+    .footer {
+        &__wrapper {
+            flex-direction: column;
+            row-gap: 16px;
+            justify-content: center;
+            align-items: center;
+        }
+        &__item {
+            text-align: center;
+        }
+        &__li {
+            display: grid;
+            justify-content: center;
+        }
+        &__cont {
+            &__span {
+                width: 100%;
+                grid-column: 1/-1;
+            }
+        }
+    }
+}
