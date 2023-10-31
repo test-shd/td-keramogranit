@@ -33,25 +33,42 @@ const swiper2 = new Swiper('.main-rew__slider', {
     spaceBetween: 40,
     centeredSlides: false,
     loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      dynamicBullets: true,
+    },
     
     
     // Navigation arrows
-    navigation: {
-      nextEl: '.main-rew__slider__next',
-      prevEl: '.main-rew__slider__prev',
-    },
+    
     breakpoints: {
       
       1024: {
         slidesPerView: 3,
         spaceBetween: 54,
         centeredSlides: true,
+        pagination: false,
+        navigation: {
+          nextEl: '.main-rew__slider__next',
+          prevEl: '.main-rew__slider__prev',
+        },
       },
      
      
     },
    
   });
+
+//маска для телефона
+
+let element = document.querySelectorAll('.phone');
+let maskOptions = {
+    mask: '+7(000)000-00-00'
+};
+for (let i = 0; i < element.length; i++) {
+    let mask = IMask(element[i], maskOptions);
+}
 
   function animation() {
    gsap.registerPlugin(ScrollTrigger);
@@ -69,7 +86,7 @@ const swiper2 = new Swiper('.main-rew__slider', {
     });
 
     gsap.to('.promo__img', {
-      'width': '170%',
+      'width': '150%',
       scrollTrigger: {
         start: 'top top',
         end: '400px',

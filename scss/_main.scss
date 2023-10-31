@@ -1,6 +1,9 @@
 .promo {
    overflow: hidden;
    width: 100%;
+   
+   margin: 0 auto;
+   position: relative;
     &__slider {
         width: 100%;
         height: 100vh;
@@ -311,6 +314,8 @@
     }
     &__images {
         width: 100%;
+        max-width: 1680px;
+        margin: 0 auto;
         height: 720px;
         position: relative;
     }
@@ -378,6 +383,10 @@
         transform: scale(1.1);
     }
     &__slider {
+        position: relative;
+        max-width: 1680px;
+        margin: 0 auto;
+        
         &__arrow {
             width: 48px;
             height: 48px;

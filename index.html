@@ -168,7 +168,7 @@
                     Оставьте свой номер телефона, и мы предложим Вам особые условия
                 </p>
                 <div class="wrapper_center mb_16">
-                    <input type="text" class="form__input">
+                    <input type="text" class="form__input phone" placeholder="Введите номер телефона">
                     <button class="btn">Заказать звонок</button>
                 </div>
                 <div class="policy">
@@ -286,11 +286,14 @@
                     </div>
                 </div>
             </div>
+             <!-- If we need pagination -->
+             <div class="swiper-pagination"></div>
            <div class="wrapper_center main-rew__slider__arrows">
             <button type="button" class="main-rew__slider__arrow main-rew__slider__prev"></button>
             <button type="button" class="main-rew__slider__arrow main-rew__slider__next"></button>
             
            </div>
+          
         </div>
     </section>
     <section class="main-form">
@@ -307,7 +310,7 @@
                     </div>
                     <div class="form__input__wrap">
                         <label for="phone">Введите телефон</label>
-                        <input id="phone" type="text" class="form__input">
+                        <input id="phone" type="text" class="form__input phone">
     
                     </div>
                     <button class="btn" type="button">Заказать звонок</button>
@@ -377,6 +380,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>	
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script defer src="js/swiper-bundle.min.js"></script>
+    <script defer src="js/imask.js"></script>
     <script defer src="js/script.js"></script>
 </body>
 </html>
