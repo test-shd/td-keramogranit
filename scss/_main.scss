@@ -14,10 +14,7 @@
         background-color: #333;
         position: relative;
         overflow: hidden;
-        // &:nth-child(1) {
-        //     background: url(../img/promo-bg.png) no-repeat center;
-        //     background-size: cover;
-        // }
+        
         &:nth-child(2) {
             background: url(../img/promo-banner1.png) no-repeat center;
             background-size: cover;
@@ -69,7 +66,7 @@
         object-position: center;
     }
     &__slider {
-        &__arrow {
+        .slick-arrow {
             display: block;
             width: 48px;
             height: 48px;
@@ -85,17 +82,19 @@
             cursor: pointer;
             border: none;
             transition: background .3s;
+            font-size: 1px;
+            color: transparent;
             &:hover {
                 background-color: rgba(255, 255, 255, 0.70);
             }
         }
-        &_prev {
+        .slick-prev {
             left: 48px;
             background-image: url(../img/icons/arrow-left.svg);
             transform: translateY(-50%) rotate(180deg);
 
         }
-        &_next {
+        .slick-next {
             right: 48px;
             background-image: url(../img/icons/arrow-left.svg);
         }
@@ -355,12 +354,12 @@
     }
 }
 .main-rew {
-    padding: 17px 0 85px;
+    padding: 17px 0 130px;
     overflow: hidden;
     &__item {
         border-radius: 6px;
         border: 1px solid #02543E;
-        
+        margin: 0 20px;
         background: #FFF;
         padding: 42px 36px;
     }
@@ -379,15 +378,13 @@
         font-weight: 600;
         line-height: 120%; 
     }
-    .swiper-slide-active {
-        transform: scale(1.1);
-    }
+    
     &__slider {
         position: relative;
         max-width: 1680px;
         margin: 0 auto;
         
-        &__arrow {
+        .slick-arrow {
             width: 48px;
             height: 48px;
             border: 1px solid $green;
@@ -395,19 +392,50 @@
             border-radius: 100%;
             background: #fff url(../img/icons/arrow-green.svg) no-repeat center/35%;
             transition: background .3s;
+            font-size: 1px;
+            color: transparent;
+            position: absolute;
+            bottom: -68px;
+            left: 50%;
+            transform: translateX(-50%);
             &:hover {
                 background-color: rgba(2, 84, 62, 0.60);
             }
         }
         
-        &__prev {
-            transform: rotate(180deg);
+        .slick-prev {
+            transform: translateX(-105%) rotate(180deg);
+            z-index: 3;
+        }
+        .slick-next {
+            transform: translateX(5%);
             
         }
-        &__arrows {
-            margin-top: 58px;
-            gap: 20px;
+        .slick-dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            list-style-type: none;
+            button {
+                background: transparent;
+                border: 100%;
+                border: none;
+                font-size: 1px;
+                color: transparent;
+                width: 8px;
+                height: 8px;
+                background: $green;
+                border-radius: 100%;
+                opacity: .7;
+            }
+            .slick-active {
+                button {
+                    opacity: 1;
+                }
+            }
         }
+       
     }
     
 }

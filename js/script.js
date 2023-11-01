@@ -16,49 +16,44 @@ $('.menu__item__submenu').on('mouseleave', function(){
 });
 
 //promo slider
-const swiper = new Swiper('.promo__slider', {
-      effect: 'fade', 
-    // Navigation arrows
-    navigation: {
-      nextEl: '.promo__slider_next',
-      prevEl: '.promo__slider_prev',
-    },
-  
+
+  $('.promo__slider').slick({
+    fade: true,
+    cssEase: 'linear',
+    arrows: true,
    
   });
 
 //rew slider
-const swiper2 = new Swiper('.main-rew__slider', {
-    slidesPerView: 1,
-    spaceBetween: 40,
-    centeredSlides: false,
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      dynamicBullets: true,
+$('.main-rew__slider').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 1438,
+      settings: {
+        
+        centerMode: false,
+        centerPadding: '40px',
+        slidesToShow: 3,
+        
+      }
     },
-    
-    
-    // Navigation arrows
-    
-    breakpoints: {
-      
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 54,
-        centeredSlides: true,
-        pagination: false,
-        navigation: {
-          nextEl: '.main-rew__slider__next',
-          prevEl: '.main-rew__slider__prev',
-        },
-      },
-     
-     
-    },
-   
-  });
+    {
+      breakpoint: 1024,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1,
+        dots: true,
+      }
+    }
+  ]
+});
+
+
 
 //маска для телефона
 
@@ -70,6 +65,7 @@ for (let i = 0; i < element.length; i++) {
     let mask = IMask(element[i], maskOptions);
 }
 
+//анимация главной
   function animation() {
    gsap.registerPlugin(ScrollTrigger);
 
@@ -113,5 +109,63 @@ for (let i = 0; i < element.length; i++) {
  }
  animation();
 
+//табы в каталоге
+$(function() {
+  
+  $('ul.tabs__caption').on('click', 'li:not(.tabs__caption__li_active)', function() {
+    $(this)
+      .addClass('tabs__caption__li_active').siblings().removeClass('tabs__caption__li_active')
+      .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+  });
+  
+});
+//слайдер в каталоге мод окно
+
+$('.catalog-prod__modal__slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  
+  asNavFor: '.catalog-prod__modal__slider2'
+});
+$('.catalog-prod__modal__slider2').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  asNavFor: '.catalog-prod__modal__slider',
+ 
+  
+  focusOnSelect: true,
+  
+});
+//modal catalog
+$('.catalog-prod__item').each(function(i) {
+  $(this).on('click', function() {
+      $('.catalog-prod__modal').eq(i).fadeIn();
+     
+  });
+});
+$('.catalog-prod__modal__close').on('click', function(){
+  $('.catalog-prod__modal').fadeOut();
+})
 
 
+$('.tabs__caption__li').each(function(e){
+  $(this).on('click', function(){
+    $(".catalog-prod__modal__slider").eq(e).slick('resize');
+    $(".catalog-prod__modal__slider2").eq(e).slick('resize');
+  });
+});
+
+//модальное окно заказа
+
+$('.modal__close').on('click', function(){
+  $('.modal__order, .overlay').fadeOut();
+});
+$('.btn_order').each(function(i) {
+  $(this).on('click', function() {
+    $('.modal__order .modal__order__name').text($('.modal__title_hide').eq(i).text());
+    $('.modal__order .modal__order__size').text($('.tabs__caption__li_active').text());
+    $('.overlay, .modal__order').fadeIn('slow');
+     
+  });
+});

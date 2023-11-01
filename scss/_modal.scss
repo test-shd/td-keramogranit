@@ -1,0 +1,114 @@
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(66, 66, 66, 0.50);
+    z-index: 11;
+    display: none;
+}
+.modal {
+    &__order {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        z-index: 12;
+        padding: 49px 36px;
+        width: 75%;
+        max-width: 767px;
+        .fs_24 {
+            text-align: center;
+        }
+        &__name {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 137%; 
+            margin-bottom: 6px;
+            text-align: center;
+        }
+        &__size {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 137%;
+            margin-bottom: 56px;
+            text-align: center;
+        }
+        &__options {
+            border: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 90px;
+        }
+        &__label {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        &__contacts {
+            margin-top: 60px;
+            border: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px 9px;
+            .form__input {
+                width: 100%;
+            }
+        }
+        &__input {
+            &__wrap {
+                position: relative;
+                width: 180px;
+            }
+            width: 180px;
+            height: 38px;
+            border-radius: 6px;
+            border: 1px solid #212529;
+            padding: 7px 32px;
+            text-align: center;
+            background: #FFF;
+        }
+        &__quant {
+            &__btn {
+                border: none;
+                background: #fff;
+                font-weight: 600;
+                font-size: 24px;
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                &_minus {
+                    left: 8px;
+                }
+                &_plus {
+                    right: 8px;
+                }
+            }
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 24px;
+        height: 24px;
+        border: none;
+        background: url(../img/icons/close.svg) no-repeat center/contain;
+        cursor: pointer;
+        z-index: 10;
+    }
+    &__title {
+        &_hide {
+            width: 1px;
+            height: 1px;
+            font-size: 1px;
+            color: transparent;
+        }
+    }
+}

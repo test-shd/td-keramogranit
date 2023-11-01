@@ -2,7 +2,7 @@ header {
     position: absolute;
     top: 0;
     width: 100%;
-    background: transparent;
+    
     padding: 16px 0;
     z-index: 10;
     background: linear-gradient(180deg, #000 -9.73%, rgba(217, 217, 217, 0.00) 93.41%);
@@ -39,10 +39,10 @@ header {
         font-weight: 400;
         line-height: normal;
         color: #fff;
-        margin-left: 64px;
+        margin-left: 80px;
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 14px;
         cursor: pointer;
         transition: color .3s;
         &:hover {
@@ -70,6 +70,17 @@ header {
             position: fixed;
             overflow-y: scroll;
             overflow-x: hidden;
+        }
+    }
+    &_transparent {
+        border-bottom: 1px solid $text-color;
+        background: #fff;
+        .header__btn {
+            color: $text-color;
+        }
+        .header__phone {
+            color: $text-color;
+            font-weight: 400;
         }
     }
 }
@@ -173,5 +184,14 @@ header {
         opacity: 1;
         padding-left: 32px;
         position: relative;
+    }
+}
+.logo {
+    width: 149px;
+    display: block;
+    img {
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
     }
 }

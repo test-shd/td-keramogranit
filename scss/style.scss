@@ -19,11 +19,20 @@ body {
     position: relative;
     display: block
 }
+.container_1398 {
+    width: 100%;
+    padding: 0 22px;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    display: block
+}
 .title {
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
     line-height: normal; 
+    // margin: 0;
     &_w500 {
         max-width: 500px;
     }
@@ -57,6 +66,7 @@ body {
     background: transparent;
     border: none;
     cursor: pointer;
+    width: fit-content;
     &::before {
         content: '';
         width: 32px;
@@ -108,6 +118,9 @@ body {
 }
 .lh_120 {
     line-height: 120%;
+}
+.lh_137 {
+    line-height: 137%;
 }
 .lh_160 {
     line-height: 160%;
@@ -173,6 +186,39 @@ body {
 
     }
 }
+.site__nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 12px 0 60px;
+    &__link {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: $text-color;
+        text-decoration: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        &:after {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: $green;
+            border-radius: 100%;
+
+        }
+        &:last-child {
+            &:after {
+                width: 0;
+                height: 0;
+            }
+        }
+    }
+}
 .policy {
     display: flex;
     align-items: flex-start;
@@ -194,5 +240,7 @@ body {
 @import '_header.scss';
 @import '_main.scss';
 @import '_footer.scss';
+@import '_catalog.scss';
+@import '_modal.scss';
 
 @import '_media.scss';
