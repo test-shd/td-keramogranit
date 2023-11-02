@@ -140,6 +140,7 @@ $('.catalog-prod__modal__slider2').slick({
 //modal catalog
 $('.catalog-prod__item').each(function(i) {
   $(this).on('click', function() {
+      $('.catalog-prod__modal .tabs__caption__li:first-child').eq(i).addClass('tabs__caption__li_active');
       $('.catalog-prod__modal').eq(i).fadeIn();
      
   });
@@ -158,14 +159,38 @@ $('.tabs__caption__li').each(function(e){
 
 //модальное окно заказа
 
-$('.modal__close').on('click', function(){
-  $('.modal__order, .overlay').fadeOut();
-});
+
 $('.btn_order').each(function(i) {
   $(this).on('click', function() {
     $('.modal__order .modal__order__name').text($('.modal__title_hide').eq(i).text());
     $('.modal__order .modal__order__size').text($('.tabs__caption__li_active').text());
+    var step = $('.step-value').eq(i).text();
+    $('.modal__order__input').attr('step', step); 
     $('.overlay, .modal__order').fadeIn('slow');
-     
+    
+    console.log(step);
   });
 });
+$('.modal__close').on('click', function(){
+  $('.modal__order, .overlay').fadeOut();
+});
+
+
+// кнопки добавить-убрать еденицу товара в модальном окне заказа
+
+
+$('.modal__order__quant__btn_plus').on('click', function() {
+  var input = $(this).prev('.modal__order__input');
+  var value = parseFloat(input.val());
+    input.val((value + 1).toFixed(2));
+});
+
+
+$('.modal__order__quant__btn_minus').on('click', function() {
+    var input = $(this).nextAll('.modal__order__input').first();
+    var value = parseFloat(input.val());
+    if (value > 0) {
+      input.val((value - 1).toFixed(2));
+    }
+  });
+

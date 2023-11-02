@@ -17,9 +17,18 @@
         transform: translate(-50%, -50%);
         background: #fff;
         z-index: 12;
-        padding: 49px 36px;
+        padding: 34px 36px;
         width: 75%;
         max-width: 767px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 100vh;
+
+        &__form {
+            .btn {
+                margin: 0 auto;
+            }
+        }
         .fs_24 {
             text-align: center;
         }
@@ -51,7 +60,8 @@
             margin-bottom: 12px;
         }
         &__contacts {
-            margin-top: 60px;
+            margin-top: 36px;
+            margin-bottom: 36px;
             border: none;
             display: grid;
             grid-template-columns: 1fr 1fr;
