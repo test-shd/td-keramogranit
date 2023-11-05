@@ -112,6 +112,7 @@
                             <span class="catalog-prod__item__name_rus">Аллаки Серый</span>
                         </p>
                     </div>
+                    
                 </div>
             </div>
         </section>
@@ -131,6 +132,7 @@
                         <img src="../../img/catalog/graniteya/allaki/catalog-prod-img.png" alt="Аллаки" srcset="../../img/catalog/graniteya/allaki/catalog-prod-img.png 1x, ../../img/catalog/graniteya/allaki/catalog-prod-img-2x.png 2x">
                         </picture>
                     </div>
+                    
                 </div>
                 <a href="../../portfolio.html" class="btn_transparent" target="_blank" rel="noopener noreferrer">Перейти в портфолио</a>
             </div>
@@ -258,7 +260,7 @@
                           </div>
                     </div>
                     <div class="catalog-prod__modal__content">
-                        <p class="fs_18 fw_600 lh_norm">Размеры</p>
+                        <p class="fs_18 fw_600 lh_norm desktop">Размеры</p>
                         <div class="catalog-prod__modal__block">
                             <p class="fs_18 fw_600 lh_137">Поверхности</p>
                             <p class="fs_18 fw_600 lh_137">Цена</p>
@@ -358,7 +360,7 @@
                               </div>
                         </div>
                         <div class="catalog-prod__modal__content">
-                            <p class="fs_18 fw_600 lh_norm">Размеры</p>
+                            <p class="fs_18 fw_600 lh_norm desktop">Размеры</p>
                             <div class="catalog-prod__modal__block">
                                 <p class="fs_18 fw_600 lh_137">Поверхности</p>
                                 <p class="fs_18 fw_600 lh_137">Цена</p>
@@ -460,7 +462,7 @@
                               </div>
                         </div>
                         <div class="catalog-prod__modal__content">
-                            <p class="fs_18 fw_600 lh_norm">Размеры</p>
+                            <p class="fs_18 fw_600 lh_norm desktop">Размеры</p>
                             <div class="catalog-prod__modal__block">
                                 <p class="fs_18 fw_600 lh_137">Поверхности</p>
                                 <p class="fs_18 fw_600 lh_137">Цена</p>
@@ -570,7 +572,7 @@
                           </div>
                     </div>
                     <div class="catalog-prod__modal__content">
-                        <p class="fs_18 fw_600 lh_norm">Размеры</p>
+                        <p class="fs_18 fw_600 lh_norm desktop">Размеры</p>
                         <div class="catalog-prod__modal__block">
                             <p class="fs_18 fw_600 lh_137">Поверхности</p>
                             <p class="fs_18 fw_600 lh_137">Цена</p>
@@ -669,7 +671,7 @@
                               </div>
                         </div>
                         <div class="catalog-prod__modal__content">
-                            <p class="fs_18 fw_600 lh_norm">Размеры</p>
+                            <p class="fs_18 fw_600 lh_norm desktop">Размеры</p>
                             <div class="catalog-prod__modal__block">
                                 <p class="fs_18 fw_600 lh_137">Поверхности</p>
                                 <p class="fs_18 fw_600 lh_137">Цена</p>
@@ -771,7 +773,7 @@
                               </div>
                         </div>
                         <div class="catalog-prod__modal__content">
-                            <p class="fs_18 fw_600 lh_norm">Размеры</p>
+                            <p class="fs_18 fw_600 lh_norm desktop">Размеры</p>
                             <div class="catalog-prod__modal__block">
                                 <p class="fs_18 fw_600 lh_137">Поверхности</p>
                                 <p class="fs_18 fw_600 lh_137">Цена</p>
@@ -839,9 +841,9 @@
                 <div>
                     <p class="fs_16 fw_600 mb_24">Введите количество:</p>
                     <div class="modal__order__input__wrap">
-                        <button class="modal__order__quant__btn modal__order__quant__btn_minus" type="button">-</button>
-                        <input type="number" name="quantity" class="modal__order__input" value="1" step="" min="0">
-                        <button class="modal__order__quant__btn modal__order__quant__btn_plus" type="button">+</button>
+                        <button class="modal__order__quant__btn modal__order__quant__btn_minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                        <input type="number" name="quantity" class="modal__order__input" value="1" step="" min="0" readonly>
+                        <button class="modal__order__quant__btn modal__order__quant__btn_plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
                     </div>
                 </div>
                 

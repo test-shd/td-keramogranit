@@ -124,6 +124,10 @@
         }
         &__item {
             padding: 24px 12px;
+            margin: 0 7px;
+            .mb_20 {
+                margin-bottom: 12px;
+            }
             .fs_24 {
                 font-size: 16px;
             }
@@ -154,6 +158,115 @@
             }
         }
     }
+    .site__nav {
+        margin-bottom: 36px;
+    }
+    .title_24 {
+        font-size: 18px;
+    }
+    .catalog-prod {
+        .wrapper_start {
+            gap: 16px;
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            &::-webkit-scrollbar {
+                height: 3px;
+                
+              }
+            &::-webkit-scrollbar-track {
+                background: transparent;
+              }
+            &::-webkit-scrollbar-thumb {
+                background-color: #B7B7B7;
+                border-radius: 3px;
+              }
+        }
+        &__img {
+            height: 232px;
+            margin: 24px 0;
+        }
+        &__item {
+            &__img {
+                width: 156px;
+                height: 156px;
+            }
+            &__name {
+                font-size: 14px;
+                margin-top: 8px;
+                &_rus {
+                    font-size: 12px;
+                }
+            }
+        }
+        
+    }
+    .catalog-portf {
+        .mb_56 {
+            margin-bottom: 36px;
+        }
+        .btn_transparent {
+            margin: 0;
+        }
+        .wrapper_start {
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        &__img {
+            width: 156px;
+            height: 156px;
+        }
+    }
+    .catalog-prod {
+        &__modal {
+            .tabs__wrapper {
+                flex-direction: column;
+            }
+            .tabs__caption {
+                left: 0;
+                top: 0;
+            }
+            &__sliders {
+                width: 100%;
+                margin-top: 30px;
+            }
+            &__content {
+                width: 100%;
+            }
+            &__block {
+                margin-top: 40px;
+            }
+            &__close {
+                right: 24px;
+                top: 24px;
+            }
+        }
+    }
+    .modal__order {
+        width: 100%;
+        padding: 24px 16px;
+        &__options {
+            grid-template-columns: 1fr;
+            row-gap: 24px;
+        }
+        &__contacts {
+            grid-template-columns: 1fr;
+            .form__input {
+               
+                &__wrap {
+                    max-width: 375px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:525px) {
+    .catalog {
+        &__wrapper {
+            justify-content: center;
+        }
+    }
+
 }
 @media screen and (max-width:374px) {
     .promo {

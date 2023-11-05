@@ -44,7 +44,7 @@ $('.main-rew__slider').slick({
       breakpoint: 1024,
       settings: {
         arrows: false,
-        centerMode: true,
+        centerMode: false,
         centerPadding: '40px',
         slidesToShow: 1,
         dots: true,
@@ -109,7 +109,7 @@ for (let i = 0; i < element.length; i++) {
  }
  animation();
 
-//табы в каталоге
+//табы в каталоге мод окно
 $(function() {
   
   $('ul.tabs__caption').on('click', 'li:not(.tabs__caption__li_active)', function() {
@@ -119,6 +119,7 @@ $(function() {
   });
   
 });
+
 //слайдер в каталоге мод окно
 
 $('.catalog-prod__modal__slider').slick({
@@ -132,22 +133,24 @@ $('.catalog-prod__modal__slider2').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   asNavFor: '.catalog-prod__modal__slider',
- 
+
   
   focusOnSelect: true,
   
 });
+
 //modal catalog
 $('.catalog-prod__item').each(function(i) {
   $(this).on('click', function() {
       $('.catalog-prod__modal .tabs__caption__li:first-child').eq(i).addClass('tabs__caption__li_active');
-      $('.catalog-prod__modal').eq(i).fadeIn();
+      $('.catalog-prod__modal').eq(i).addClass('catalog-prod__modal_active');
+
      
   });
 });
 $('.catalog-prod__modal__close').on('click', function(){
-  $('.catalog-prod__modal').fadeOut();
-})
+  $('.catalog-prod__modal').removeClass('catalog-prod__modal_active');
+});
 
 
 $('.tabs__caption__li').each(function(e){
@@ -164,7 +167,7 @@ $('.btn_order').each(function(i) {
   $(this).on('click', function() {
     $('.modal__order .modal__order__name').text($('.modal__title_hide').eq(i).text());
     $('.modal__order .modal__order__size').text($('.tabs__caption__li_active').text());
-    var step = $('.step-value').eq(i).text();
+    let step = $('.step-value').eq(i).text();
     $('.modal__order__input').attr('step', step); 
     $('.overlay, .modal__order').fadeIn('slow');
     
@@ -176,21 +179,4 @@ $('.modal__close').on('click', function(){
 });
 
 
-// кнопки добавить-убрать еденицу товара в модальном окне заказа
-
-
-$('.modal__order__quant__btn_plus').on('click', function() {
-  var input = $(this).prev('.modal__order__input');
-  var value = parseFloat(input.val());
-    input.val((value + 1).toFixed(2));
-});
-
-
-$('.modal__order__quant__btn_minus').on('click', function() {
-    var input = $(this).nextAll('.modal__order__input').first();
-    var value = parseFloat(input.val());
-    if (value > 0) {
-      input.val((value - 1).toFixed(2));
-    }
-  });
 

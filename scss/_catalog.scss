@@ -164,7 +164,8 @@
 }
 //modal
 .catalog-prod__modal {
-    display: none;
+    opacity: 0;
+    left: -200%;
     background: #fff;
     width: 100%;
     height: 100vh;
@@ -174,6 +175,10 @@
     top: 0;
     z-index: 10;
     padding: 64px 0 64px;
+    &_active {
+        opacity: 1;
+        left: 0;
+    }
     &__close {
         position: absolute;
         top: 56px;
@@ -222,11 +227,13 @@
 
     .tabs__wrapper {
         position: relative;
-
+        display: flex;
+        justify-content: space-between;
     }
     &__sliders {
-        position: absolute;
-        width: 47%;
+        // position: absolute;
+        width: 43%;
+
         
     }
    
@@ -274,7 +281,7 @@
     }
     &__content {
         width: 50%;
-        position: absolute;
+        // position: absolute;
         right: 0;
         padding-bottom: 36px;
     }
