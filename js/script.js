@@ -143,13 +143,17 @@ $('.catalog-prod__modal__slider2').slick({
 $('.catalog-prod__item').each(function(i) {
   $(this).on('click', function() {
       $('.catalog-prod__modal .tabs__caption__li:first-child').eq(i).addClass('tabs__caption__li_active');
+      $('.catalog-prod__modal .tabs__content_first').eq(i).addClass('active');
       $('.catalog-prod__modal').eq(i).addClass('catalog-prod__modal_active');
-
+      $('.catalog-prod__modal .tabs__content_first .catalog-prod__modal__slider').eq(i).slick('resize');
+      $('.catalog-prod__modal .tabs__content_first .catalog-prod__modal__slider2').eq(i).slick('resize');
      
   });
 });
 $('.catalog-prod__modal__close').on('click', function(){
   $('.catalog-prod__modal').removeClass('catalog-prod__modal_active');
+  $('.catalog-prod__modal .tabs__caption__li_active').removeClass('tabs__caption__li_active');
+  $('.catalog-prod__modal .tabs__content.active').removeClass('active');
 });
 
 
