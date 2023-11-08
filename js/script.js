@@ -1,4 +1,4 @@
-
+//menu
 $('.header__btn').on('click', function(){
     $('.header__nav').addClass('header__nav_active');
 });
@@ -13,6 +13,12 @@ $('.menu__item__submenu').on('mouseenter', function(){
 });
 $('.menu__item__submenu').on('mouseleave', function(){
   $('.submenu').removeClass('submenu_active');
+});
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 300) {
+    $('.header__nav').removeClass('header__nav_active');
+  }
 });
 
 //promo slider

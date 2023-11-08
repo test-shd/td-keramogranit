@@ -166,10 +166,12 @@
     }
     .catalog-prod {
         .wrapper_start {
+            flex-wrap: nowrap;
             gap: 16px;
             width: 100%;
             overflow-x: auto;
             overflow-y: hidden;
+            align-items: flex-start;
             &::-webkit-scrollbar {
                 height: 3px;
                 

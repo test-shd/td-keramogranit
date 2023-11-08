@@ -82,7 +82,7 @@
     //карточка продукта
     &-prod {
         padding-top: 164px;
-        padding-bottom: 64px;
+        padding-bottom: 164px;
         &__img {
             width: 100%;
             height: 376px;
@@ -92,7 +92,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                object-position: left;
+                object-position: left bottom;
             }
         }
         .wrapper_start {
