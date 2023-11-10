@@ -39,6 +39,12 @@
             line-height: 137%; 
             margin-bottom: 6px;
             text-align: center;
+            display: block;
+            border: none;
+            margin: 0 auto 16px;
+            &:focus {
+                outline: 3px solid #E6EEEC;
+            }
         }
         &__size {
             font-size: 16px;
@@ -47,6 +53,12 @@
             line-height: 137%;
             margin-bottom: 56px;
             text-align: center;
+            display: block;
+            border: none;
+            margin: 0 auto 24px;
+            &:focus {
+                outline: 3px solid #E6EEEC;
+            }
         }
         &__options {
             border: none;

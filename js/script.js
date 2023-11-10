@@ -175,8 +175,8 @@ $('.tabs__caption__li').each(function(e){
 
 $('.btn_order').each(function(i) {
   $(this).on('click', function() {
-    $('.modal__order .modal__order__name').text($('.modal__title_hide').eq(i).text());
-    $('.modal__order .modal__order__size').text($('.tabs__caption__li_active').text());
+    $('.modal__order .modal__order__name').val($('.modal__title_hide').eq(i).text());
+    $('.modal__order .modal__order__size').val($('.tabs__caption__li_active').text());
     let step = $('.step-value').eq(i).text();
     $('.modal__order__input').attr('step', step); 
     $('.overlay, .modal__order').fadeIn('slow');
