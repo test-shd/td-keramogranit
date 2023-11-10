@@ -97,6 +97,7 @@
         }
         .wrapper_start {
             gap: 36px;
+            flex-wrap: wrap;
         }
         &__item {
             cursor: pointer;
