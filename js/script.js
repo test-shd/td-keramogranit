@@ -145,19 +145,6 @@ $('.catalog-prod__modal__slider2').slick({
   
 });
 
-//попап слайдера
-$('.catalog-prod__modal__slider').each(function(i){
-  $(this).magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    tLoading: 'Загрузка изображения #%curr%...',
-    gallery: {
-        enabled: true,
-        navigateByImgClick: true,
-        preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-    }
-    });
-});
 
 
 //modal catalog
@@ -203,5 +190,18 @@ $('.modal__close').on('click', function(){
   $('.modal__order, .overlay').fadeOut();
 });
 
+//попап слайдера
+$('.catalog-prod__modal__slider').each(function(i){
+  $(this).magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Загрузка изображения #%curr%...',
+    gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+    }
+    });
+});
 
 
