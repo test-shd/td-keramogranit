@@ -132,18 +132,33 @@ $('.catalog-prod__modal__slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
-  
+  infinite: false,
   asNavFor: '.catalog-prod__modal__slider2'
 });
 $('.catalog-prod__modal__slider2').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   asNavFor: '.catalog-prod__modal__slider',
-
+  infinite: false,
   
   focusOnSelect: true,
   
 });
+
+//попап слайдера
+$('.catalog-prod__modal__slider').each(function(i){
+  $(this).magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Загрузка изображения #%curr%...',
+    gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+    }
+    });
+});
+
 
 //modal catalog
 $('.catalog-prod__item').each(function(i) {
