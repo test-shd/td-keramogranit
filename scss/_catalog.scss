@@ -1,5 +1,6 @@
 .catalog {
-    padding: 164px 0;
+    padding: 91px 0;
+   
     &__wrapper {
         display: flex;
         justify-content: flex-start;
@@ -81,7 +82,7 @@
     }
     //карточка продукта
     &-prod {
-        padding-top: 164px;
+        padding-top: 91px;
         padding-bottom: 164px;
         &__img {
             width: 100%;
