@@ -99,9 +99,11 @@
         .wrapper_start {
             gap: 36px;
             flex-wrap: wrap;
+            align-items: flex-start;
         }
         &__item {
             cursor: pointer;
+            max-width: 256px;
             &__img {
                 width: 256px;
                 height: 256px;
