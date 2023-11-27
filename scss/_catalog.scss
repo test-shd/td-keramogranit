@@ -318,6 +318,17 @@
         background: url(../img/icons/polir.svg) no-repeat center/contain;
     }
    }
+   &__str {
+    display: flex;
+    align-items: center;
+    &::before {
+        content: '';
+        display: block;
+        width: 43px;
+        height: 43px;
+        background: url(../img/icons/str.svg) no-repeat center/contain;
+    }
+   }
    &__options {
     margin-top: 56px;
    }
