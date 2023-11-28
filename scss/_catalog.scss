@@ -144,6 +144,37 @@
                     text-transform: capitalize;
                 }
             }
+            &-new {
+                position: relative;
+                
+                &::before {
+                    content: 'Новинка';
+                    
+                    color: #fff;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 120%; /* 16.8px */
+                    letter-spacing: 1.4px;
+                    text-transform: uppercase;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: $green;
+                    padding: 10px 16px;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background: #FFF5E1;
+                    width: 110%;
+                    height: 105%;
+                    top: 50%;
+                    left: 50%;
+                    z-index: -1;
+                    transform: translate(-50%, -50%);
+                }
+            }
         }
     }
     &-portf {
