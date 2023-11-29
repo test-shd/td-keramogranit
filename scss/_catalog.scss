@@ -229,6 +229,14 @@
     .tabs {
         position: relative;
         margin-top: 40px;
+        &-onesize {
+            .tabs__caption {
+                position: relative;
+                right: 0;
+                left: 50%;
+                top: 70px;
+            }
+        }
     }
     .tabs__content {
         display: none; /* по умолчанию прячем все блоки */
