@@ -75,6 +75,7 @@ header {
     &_transparent {
         border-bottom: 1px solid $text-color;
         background: #fff;
+        position: relative;
         .header__btn {
             color: $text-color;
         }

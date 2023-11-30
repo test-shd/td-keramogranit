@@ -1,5 +1,5 @@
 .catalog {
-    padding: 91px 0;
+    padding: 0px 0 100px;
    
     &__wrapper {
         display: flex;
@@ -82,7 +82,7 @@
     }
     //карточка продукта
     &-prod {
-        padding-top: 91px;
+        padding-top: 0px;
         padding-bottom: 164px;
         &__img {
             width: 100%;
