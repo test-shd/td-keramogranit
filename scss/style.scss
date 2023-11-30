@@ -216,6 +216,10 @@ body {
         width: 100%;
 
     }
+
+}
+textarea {
+    resize: none;
 }
 .site__nav {
     display: flex;
@@ -275,5 +279,6 @@ body {
 @import '_modal.scss';
 
 @import '_production.scss';
+@import '_contacts.scss';
 
 @import '_media.scss';

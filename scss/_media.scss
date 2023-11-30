@@ -293,6 +293,33 @@
             font-size: 14px;
         }
     }
+    .contacts {
+        &__wrapper {
+            flex-direction: column;
+            margin-top: 24px;
+        }
+        &__form {
+            width: 100%;
+        }
+        &__link {
+            font-size: 18px;
+        }
+        &__item {
+            margin-bottom: 20px;
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+    .info {
+        &__wrapper {
+            justify-content: center;
+        }
+        &__item {
+            width: 100%;
+            max-width: 350px;
+        }
+    }
 }
 @media screen and (max-width:525px) {
     .catalog {
